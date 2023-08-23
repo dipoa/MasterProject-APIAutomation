@@ -1,0 +1,13 @@
+# Python cache files and directories
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.Python
+
+# pytest cache directory
+.pytest_cache/
+
+# pytest output
+report.html
+assets/
