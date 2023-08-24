@@ -10,7 +10,7 @@ def test_suite():
     
     # Step 1: Fetch Booking
     data = get_booking(BOOKING_ID)
-    print(data)
+    # print(data)
     yield 'fetch_booking'
     
     # Step 2: Validate Response Data Types
