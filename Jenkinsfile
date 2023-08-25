@@ -23,10 +23,23 @@ pipeline {
             }
         }
 
+        stage('Debug and Update Python/Pip') {
+            steps {
+                script {
+                    sh '''
+                    . venv/bin/activate
+                    python --version
+                    which python
+                    pip --version
+                    pip install --upgrade pip setuptools wheel
+                    '''
+                }
+            }
+        }
+
         stage('Install Dependencies') {
             steps {
                 script {
-                    // Install necessary dependencies
                     sh '''
                     . venv/bin/activate
                     pip install -r requirements.txt
