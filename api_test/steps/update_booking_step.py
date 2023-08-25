@@ -12,3 +12,15 @@ def update_booking(booking_id, payload):
     response.raise_for_status()  # Raise an exception for HTTP errors
 
     return response.json()
+
+def partial_update_booking(booking_id, payload):
+    headers = {
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+        "Authorization": f"Basic {AUTH_TOKEN}"
+    }
+    
+    response = requests.patch(f"{BASE_URL}/booking/{booking_id}", json=payload, headers=headers)
+    response.raise_for_status()  # Raise an exception for HTTP errors
+
+    return response.json()
