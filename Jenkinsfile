@@ -1,9 +1,7 @@
 pipeline {
     agent any
 
-    environment {
-        // You can define environment variables here, if needed
-    }
+    // Removed empty environment block
 
     stages {
         stage('Checkout') {
@@ -52,7 +50,8 @@ pipeline {
     
     post {
         always {
-            // Actions to always run, you could put test result archiving here.
+            // For demonstration, added a simple echo statement
+            echo 'This will always run'
         }
         success {
             // Actions to take if stage completes successfully
