@@ -2,7 +2,7 @@ import pytest
 from steps.create_booking_step import create_booking  # Import the function that sends the POST request
 
 @pytest.fixture(scope="module")
-def created_booking_id():
+def created_booking():
     payload = {
         "firstname": "Dipo",
         "lastname": "Supriadi",
@@ -15,5 +15,5 @@ def created_booking_id():
         "additionalneeds": "Breakfast"
     }
     response = create_booking(payload)
-    booking_id = response['bookingid']
-    return booking_id
+    # booking_id = response['bookingid']
+    return response
