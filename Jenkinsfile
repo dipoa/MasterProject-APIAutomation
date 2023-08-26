@@ -43,6 +43,7 @@ pipeline {
                     sh '''
                     . venv/bin/activate
                     pip install -r requirements.txt
+                    pip install allure-pytest
                     '''
                 }
             }
@@ -54,7 +55,7 @@ pipeline {
                     // Run pytest
                     sh '''
                     . venv/bin/activate
-                    pytest
+                    pytest --junitxml=report.xml --alluredir=path/to/allure-results
                     '''
                 }
             }

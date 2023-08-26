@@ -11,3 +11,7 @@ __pycache__/
 # pytest output
 report.html
 assets/
+report.xml
+
+#allure
+path/to/allure-results
