@@ -8,8 +8,8 @@ from steps.update_booking_step import partial_update_booking
 PAYLOAD = {
     "firstname": "Max",
     "lastname": "Karl",
-    "totalprice": 1500,
-    "additionalneeds": "Smoking Room"
+    "totalprice": 15000,
+    "additionalneeds": "Non Smoking Room"
 }
 
 @pytest.mark.usefixtures("created_booking")
