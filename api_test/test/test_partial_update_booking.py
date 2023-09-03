@@ -17,7 +17,7 @@ PAYLOAD = {
 def test_suite(created_booking):
     
     # Step 1: Update Booking
-    booking_id=created_booking["bookingid"]    
+    booking_id=created_booking["bookingid"]
     data = partial_update_booking(booking_id, PAYLOAD)
     # return {'updated_data': data}
     yield 'update_booking'
